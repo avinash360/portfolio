@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 :root{
     --main-color: 255, 50, 50;
+    /* 255, 50, 50; */
     --bg-color: black;
     --full-width: 100vw;
     --full-height: 100vh;
     --font-josefin: 'Josefin Sans', sans-serif;
     --font-poppins: var(--font-poppins);
+    --text-color: #FF3232;
 }
 
 body {
@@ -70,7 +72,7 @@ body {
 #menu a {
     margin:0px 6%;
     font-size:19px;
-    color:#fff;
+    color:var(--text-color);
     text-decoration:underline;
 }
 #middle {
@@ -83,7 +85,7 @@ body {
     top:0;
     text-align:center;
     z-index:1;
-    color:#fff;
+    color:var(--text-color);
     padding-bottom:10vh;
 }
 #middle h1 {
@@ -97,8 +99,9 @@ body {
     text-align:center;
     font-size:25px;
     transform:rotate(-90deg);
-    background:transparent;
-    color:#fff;
+    /* background:transparent; */
+    background-color: rgba(0, 255, 255, 0.05);
+    color:var(--text-color);
     position:fixed;
     left:0;
     bottom:40vh;
@@ -115,8 +118,9 @@ body {
     text-align:center;
     font-size:25px;
     transform:rotate(90deg);
-    background:transparent;
-    color:#fff;
+    /* background:transparent; */
+    background-color: rgba(0, 255, 255, 0.05);
+    color:var(--text-color);
     position:fixed;
     right:0;
     bottom:40vh;
@@ -132,8 +136,9 @@ body {
     height:10vw;
     text-align:center;
     font-size:25px;
-    background:transparent;
-    color:#fff;
+    /* background:transparent; */
+    background-color: rgba(0, 255, 255, 0.05);
+    color:var(--text-color);
     position:fixed;
     bottom:0;
     left:45vw;
@@ -146,14 +151,20 @@ body {
 }
 #about:hover {
     background:rgba(var(--main-color),0.9);
+    color: black;
+    font-size: 50px;
     cursor:pointer;
 }
 #work:hover {
     background:rgba(var(--main-color),0.9);
+    color: black;
+    font-size: 50px;
     cursor:pointer;
 }
 #skills:hover {
     background:rgba(var(--main-color),0.9);
+    color: black;
+    font-size: 50px;
     cursor:pointer;
 }
 #middle table {
@@ -164,8 +175,8 @@ body {
     text-align:center;
 }
 .social {
-    color:#fff;
-    font-size:22px;
+    color:var(--text-color);
+    font-size:30px;
     border-radius:50%;
     transition:0.4s ease-in-out;
     margin:0px 8px;
@@ -175,12 +186,16 @@ body {
     cursor: pointer;
     color:rgb(var(--main-color));
 }
+.social em:hover{
+    transition: 0.6s ease-in-out;
+    transform: rotate(360deg);
+}
 .container {
     width:90vw;
     height:90vh;
     padding:5vh 5vw;
     background:rgb(var(--main-color));
-    color:#fff;
+    color:#000;
     z-index:9;
     position:fixed;
     max-height:var(--full-height);
@@ -205,105 +220,25 @@ body {
     border:2px solid #fff;
     margin:0px 10px;
     border-radius:50px;
-}
-#used:hover {
-    cursor:text;
+    color:#000;
+    background-color: #fff;
 }
 #used div:hover {
     cursor:text;
+    transform: scale(1.5);
 }
 .container h1 {
     font-size:60px;
     text-decoration:underline;
 }
+.container h2 {
+    text-decoration:underline;
+}
 .container p {
-    font-size:21px;
-}
-.btn_one {
-    font-size:18px;
-    font-family: var(--font-josefin);
-    color:#fff;
-    background:transparent;
-    border:3px solid #fff;
-    padding:8px 40px;
-    border-radius:80px;
-    font-weight:bold;
-    margin:2vh 10px;
-    transition:0.4s ease-in-out;
-}
-.btn_one:hover {
-    cursor:pointer;
-    color:rgb(var(--main-color));
-    background:#fff;
-}
-.btn_two {
-    font-size:18px;
-    font-family: var(--font-josefin);
-    color:rgb(var(--main-color));
-    background:#fff;
-    border:3px solid #fff;
-    padding:8px 40px;
-    border-radius:80px;
-    font-weight:bold;
-    margin:2vh 10px;
-    transition:0.4s ease-in-out;
-}
-.btn_two:hover {
-    cursor:pointer;
-    padding:8px 60px;
-}
-.container form input {
-    width:46%;
-    margin:20px 1%;
-    background:transparent;
-    border:0px;
-    border-bottom:3px solid rgba(255,255,255,0.5);
-    padding:8px 10px;
-    font-family: var(--font-poppins);
-    font-size:18px;
-    transition:0.4s ease-in-out;
-    color:#fff;
-    font-weight:bold;
-}
-.container form textarea {
-    width:96%;
-    margin:20px 1%;
-    padding:8px 10px;
-    border:0px;
-    border-bottom:3px solid rgba(255,255,255,0.5);
-    padding:8px 10px;
-    font-family: var(--font-poppins);
-    font-size:18px;
-    background:transparent;
-    resize:none;
-    transition:0.4s ease-in-out;
-    color:#fff;
-    font-weight:bold;
-}
-.container form input:focus {
-    outline:none;
-    border-bottom:3px solid rgba(255, 255, 255,1);
-}
-.container form textarea:focus {
-    outline:none;
-    border-bottom:3px solid rgba(255, 255, 255,1);
+    font-size: 30px;
 }
 ::placeholder {
-    color:#fff;
-}
-#footer {
-    color:#fff;
-    width:92vw;
-    padding:5vh 4vw;
-    text-align:right;
-    position:fixed;
-    z-index:1;
-    bottom:0;
-    font-size:16px;
-    font-weight:bold;
-}
-#footer a {
-    color:rgb(var(--main-color)) ;
+    color:var(--text-color);
 }
 #particles-js {
     position:fixed;
@@ -324,7 +259,7 @@ body {
     background: rgba(var(--main-color),0.8); 
 }
 ::selection {
-	color: #fff;
+	color:var(--text-color);
 	background: rgb(var(--main-color));
 }
 .my-images{
@@ -357,12 +292,6 @@ body {
     }
     #middle table {
         width:80%;
-    }
-    .container form input {
-        width:90%;
-    }
-    .container form textarea {
-        width:90%;
     }
     #menu {
         display:inline-block;
